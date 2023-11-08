@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour,ICollectible
 {
-    [SerializeField] int _value;
-    [SerializeField] ScoreDatas _scoreData;
+    /*[SerializeField] int _value;
+    [SerializeField] ScoreDatas _scoreData;*/
+    [SerializeField] Objective objectives;
+
+
 
     public void Collect()
     {
-        _scoreData.UpdateScoreValue(_value);
+        objectives.ActualValue += 1;
         Destroy(gameObject);
+
+        /*_scoreData.UpdateScoreValue(_value);
+        Destroy(gameObject);*/
     }
 }
