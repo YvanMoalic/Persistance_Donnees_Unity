@@ -1,35 +1,24 @@
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody _rb;
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speed = 1;
+    private CharacterController _characterController;
+    public Vector3 move;
+
     private void Start()
     {
-        _rb = GetComponent<Rigidbody>();
+        _characterController = GetComponent<CharacterController>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        _characterController.Move(_speed * Time.deltaTime * move);
+
+        if(move != Vector3.zero)
         {
-            _rb.AddForce(0f, 0f, 1f * _speed);
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            _rb.AddForce(0f, 0f, -1f * _speed);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            _rb.AddForce(1f * _speed, 0f, 0f);
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            _rb.AddForce(-1f * _speed, 0f, 0f);
+            transform.forward = move;
         }
     }
-
 }

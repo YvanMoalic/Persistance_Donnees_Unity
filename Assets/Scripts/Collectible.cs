@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour,ICollectible
 {
-    /*[SerializeField] int _value;
-    [SerializeField] ScoreDatas _scoreData;*/
+    [SerializeField] int _value;
+    [SerializeField] ScoreDatas _scoreData;
     [SerializeField] Objective objectives;
 
 
@@ -15,7 +15,7 @@ public class Collectible : MonoBehaviour,ICollectible
         objectives.ActualValue += 1;
         Destroy(gameObject);
 
-        /*_scoreData.UpdateScoreValue(_value);
-        Destroy(gameObject);*/
+        _scoreData.UpdateScoreValue(_value);
+        Destroy(gameObject);
     }
 }

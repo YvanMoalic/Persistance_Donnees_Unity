@@ -118,4 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e96fbb66f0766448dac71f0eb7716a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _value: 1
+  _scoreData: {fileID: 11400000, guid: 313b569cfdc21e5479019c5f0687cd77, type: 2}
   objectives: {fileID: 11400000, guid: 91ecd1283c9ea4042bff8cc177ae0635, type: 2}

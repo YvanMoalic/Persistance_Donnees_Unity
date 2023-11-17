@@ -7,6 +7,7 @@ public class UIScore : MonoBehaviour
 {
     [SerializeField] private TMP_Text _scoreText;
 
+
     public void OnEnable()
     {
         ScoreDatas.OnUpdate += MiseEnFormeScore;
