@@ -4,13 +4,52 @@ using UnityEngine;
 
 public class Quete : MonoBehaviour
 {
-    private bool isFinished;
-    private bool isStarted;
-    [SerializeField] Objective[] objectives;
+    [SerializeField] private int i = 0;
+    [SerializeField] Objective[] _objective;
+    [SerializeField] QuestStarted _questStarted;
+    public GameObject questUI;
+
+    public void StartQuest()
+    {        
+        if(_questStarted.startedQuest == true)
+        {
+            CheckObjectiv();
+        }
+        else
+        {
+            
+            questUI.SetActive(true);
+            _objective[0].UpdateActualValueUI();
+            _questStarted.startedQuest = true;
+            
+        }
+        
+    }
 
     public void CheckObjectiv()
     {
-        print("oui");
+        if (i < _objective.Length)
+        {
+            if (_objective[i].IsFinished == true)
+            {
+                i++;
+                CheckObjectiv();
+            }
+            else
+            {
+                return;
+            }
+        }
+        else
+        {
+            QuestFinish();
+        }
+    }
+
+    private void QuestFinish()
+    {
+        questUI.SetActive(false);
+        print("Vous avez réussi la quête");
     }
 
 }

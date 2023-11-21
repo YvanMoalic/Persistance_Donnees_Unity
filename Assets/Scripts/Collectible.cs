@@ -6,13 +6,11 @@ public class Collectible : MonoBehaviour,ICollectible
 {
     [SerializeField] int _value;
     [SerializeField] ScoreDatas _scoreData;
-    [SerializeField] Objective objectives;
-
-
+    public Objective objectives;
 
     public void Collect()
     {
-        objectives.ActualValue += 1;
+        objectives.UpdateScoreValue(1);
         Destroy(gameObject);
 
         _scoreData.UpdateScoreValue(_value);

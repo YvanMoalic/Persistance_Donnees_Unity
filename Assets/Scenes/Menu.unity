@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &384350984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 384350985}
+  m_Layer: 0
+  m_Name: CanvasQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &384350985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384350984}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4460492, y: 2.238631, z: -5.3097463}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1496280785
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +184,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ScoreData: {fileID: 11400000, guid: 313b569cfdc21e5479019c5f0687cd77, type: 2}
+  _ObjectiveCuivre: {fileID: 11400000, guid: 91ecd1283c9ea4042bff8cc177ae0635, type: 2}
+  _ObjectiveFer: {fileID: 11400000, guid: 47ba440834d406c4cab9bf63cac4afb2, type: 2}
+  _ObjectiveOr: {fileID: 11400000, guid: bf5d0e6c594afb04a91bcf68ba4be2ad, type: 2}
+  _QuestStarted: {fileID: 11400000, guid: 0ae7ed109bda9004d952e629d53a7f81, type: 2}
+  questUI: {fileID: 384350984}
 --- !u!4 &1496280787
 Transform:
   m_ObjectHideFlags: 0
@@ -361,3 +397,4 @@ SceneRoots:
   - {fileID: 1691829013}
   - {fileID: 1642343112}
   - {fileID: 1496280787}
+  - {fileID: 384350985}
