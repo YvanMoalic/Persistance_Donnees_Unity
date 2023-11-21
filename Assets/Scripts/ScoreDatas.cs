@@ -28,7 +28,7 @@ public class ScoreDatas : ScriptableObject
         UpdateScoreUI();
     }
 
-    private void UpdateScoreUI()
+    public void UpdateScoreUI()
     {
         OnUpdate?.Invoke(ScoreValue);
     }

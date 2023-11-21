@@ -9,7 +9,14 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        _ScoreData.InitScoreValue(0);
-        SceneManager.LoadScene("Niveau1");
+        if(SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            _ScoreData.InitScoreValue(0);
+            SceneManager.LoadScene("Niveau1");
+        }
+        else
+        {
+            _ScoreData.UpdateScoreUI();
+        }
     }
 }
