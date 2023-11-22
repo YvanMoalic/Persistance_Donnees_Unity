@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7390585421340914356}
   m_Layer: 0
   m_Name: Fer
-  m_TagString: Untagged
+  m_TagString: ItemQuest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

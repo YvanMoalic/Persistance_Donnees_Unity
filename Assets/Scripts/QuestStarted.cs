@@ -6,10 +6,12 @@ using UnityEngine;
 public class QuestStarted : ScriptableObject
 {
     public bool startedQuest = false;
+    public bool finishedQuest = false;
 
     public void InitQuestStarted()
     {
         startedQuest = false;
+        finishedQuest = false;
     }
 
 }

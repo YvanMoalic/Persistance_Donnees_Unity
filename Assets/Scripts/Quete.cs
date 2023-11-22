@@ -10,20 +10,22 @@ public class Quete : MonoBehaviour
     public GameObject questUI;
 
     public void StartQuest()
-    {        
-        if(_questStarted.startedQuest == true)
+    {
+        if(_questStarted.finishedQuest == false)
         {
-            CheckObjectiv();
-        }
-        else
-        {
-            
-            questUI.SetActive(true);
-            _objective[0].UpdateActualValueUI();
-            _questStarted.startedQuest = true;
-            
-        }
-        
+            if (_questStarted.startedQuest == true)
+            {
+                CheckObjectiv();
+            }
+            else
+            {
+
+                questUI.SetActive(true);
+                _objective[0].UpdateActualValueUI();
+                _questStarted.startedQuest = true;
+
+            }
+        }                
     }
 
     public void CheckObjectiv()
@@ -48,6 +50,8 @@ public class Quete : MonoBehaviour
 
     private void QuestFinish()
     {
+        _questStarted.finishedQuest = true;
+        _questStarted.startedQuest = false;
         questUI.SetActive(false);
         print("Vous avez réussi la quête");
     }

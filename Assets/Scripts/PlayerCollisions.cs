@@ -7,6 +7,7 @@ public class PlayerCollisions : MonoBehaviour
     private GameObject overlapedActor;
     private bool onForgeron;
 
+
     private void OnTriggerEnter(Collider other)
     {
         overlapedActor= other.gameObject;
@@ -20,6 +21,7 @@ public class PlayerCollisions : MonoBehaviour
         {
             onForgeron= true;
         }
+
     }
 
     private void OnTriggerExit(Collider other)

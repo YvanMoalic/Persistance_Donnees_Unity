@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b83276774e17304c8ff59bdc1fd3e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _ItemInLevels: {fileID: 11400000, guid: aecc5545a658620489229ee551ed782f, type: 2}
+  indexItem: 0
 --- !u!143 &1996801141593278487
 CharacterController:
   m_ObjectHideFlags: 0
