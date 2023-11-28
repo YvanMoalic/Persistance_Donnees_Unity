@@ -37,6 +37,7 @@ public class PlayerCollisions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && onForgeron == true)
         {
             overlapedActor.GetComponent<Quete>().StartQuest();
+
         }
     }
 }
